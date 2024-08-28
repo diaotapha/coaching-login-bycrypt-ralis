@@ -1,0 +1,19 @@
+<%= form_for user, url: login_path, html: { id: "login-form", data: { turbo: true } } do |form| %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+  <%= form.submit "Se connecter" %>
+  <%= link_to "Créer une compte", new_user_path %>
+
+  <% if erreurs.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% erreurs.each do |message| %>
+          <li style="color: red;"><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<% end %>

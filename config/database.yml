@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: tuto_development
+  pool: 20
+  username: deploy
+  password: dabakh
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: tuto_test
+  pool: 20
+  username: deploy
+  password: dabakh
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: tuto_production
+  pool: 20
+  username: deploy
+  password: dabakh
+  host: localhost
